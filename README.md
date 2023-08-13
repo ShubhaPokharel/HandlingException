@@ -269,7 +269,7 @@ When JVM is shut down, finally block will not be executed. But, if 'System.exit(
 
 # Try and catch possobilities 
 
-1. try{
+#### 1. try{
 
    }
 
@@ -278,7 +278,7 @@ When JVM is shut down, finally block will not be executed. But, if 'System.exit(
    }
 
 
-2. try{
+#### 2. try{
   
    }
 
@@ -296,7 +296,7 @@ When JVM is shut down, finally block will not be executed. But, if 'System.exit(
 
    }
 
-3.  try{
+#### 3.  try{
   
    }
 
@@ -309,7 +309,7 @@ When JVM is shut down, finally block will not be executed. But, if 'System.exit(
    }
 
 
-4. try{
+#### 4. try{
 
       try{
 
@@ -325,7 +325,7 @@ When JVM is shut down, finally block will not be executed. But, if 'System.exit(
 
    }
 
-5. try{
+#### 5. try{
 
    }
 
@@ -341,7 +341,7 @@ When JVM is shut down, finally block will not be executed. But, if 'System.exit(
    
    }
 
-6. try{
+#### 6. try{
 
       try{
 
