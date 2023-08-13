@@ -91,9 +91,33 @@ There are 3 cases in try and catch block:
 4. The 3rd case is that the connection opens in the try block. The transaction is not successful and the catch block is not matched. The application gets terminated abnormally and the connect does not close.
 
 
-To overcome the 3rd case we can use the 'finally' block. The finally block will get executed in both normal and abnormal cases. To release the resources(scanner, file and connection) we can use the 'finally' keyword. For example:
+To overcome the 3rd case we can use the 'finally' block. The finally block will get executed in both normal and abnormal cases. To release the resources(scanner, file and connection) we can use the 'finally' keyword. 
 
+For example:
 
+class Test{
+
+   public static void main(String[] args){
+
+      try{
+      
+         System.out.println("try block");
+         
+      }
+      catch(Exception e){
+
+         System.out.println("catch block");
+         
+      }
+      finally{
+
+         System.out.println("finally block");
+         
+      }
+      
+   }
+   
+}
 
 
 Description: Lets say we have try, catch and finally block. But in those 3 blocks we are just printing out words. The catch block will not get executed because there is no exception in the try block. The try block and finally block will get executed.
