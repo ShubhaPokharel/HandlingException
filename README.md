@@ -206,3 +206,37 @@ class Test{
 
 Description: ►  Try and finally block is also valid. We can use try and catch block but we can also use try and finally block.
 
+
+#### example 5:
+
+class Test{
+
+   public static void main(String[] args){
+
+      try{
+
+         System.out.println(10/0);
+         
+      }
+      catch(ArithmeticException e){
+
+         System.out.println("ratan".charAt(28));
+      }
+
+      finally{
+
+         int[] a = {10,20,30.40};
+
+         System.out.println(a[9]);
+         
+      }
+      
+   }
+   
+}
+
+
+Description: ► This time all 3 exceptions has raised. ArithmeticException(line 218) was raised in the try block. StringIndexOutOfBoundsException(line 223) was raised in the catch block. ArrayIndexOutOfBoundsException(line 230) was raised in the finally block. JVM will raise only one exception and that exception is the exception in the finally block. 
+
+
+
