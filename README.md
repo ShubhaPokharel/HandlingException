@@ -376,3 +376,39 @@ When JVM is shut down, finally block will not be executed. But, if 'System.exit(
    }
    
 _______
+
+
+## Try with resources
+
+Try block with reources is try with parentheses( try(){} ). We can declare the resources inside try block. Once try block is completed, then the resource is automatically released.
+
+1. If the resource throws unchecked exception, catch block is not mandatory.
+
+2. If the resource throws checked exception, catch block is required, because we need to handle checked exceptions.
+
+Example:
+
+import java.io.*;
+
+class Test{
+
+   public static void main(String[] args){
+
+      try(FileInputStream fis = new FileInputStream("abc.txt") ){
+
+         System.out.println("enter a number");
+         
+      }
+
+      catch(FileNotFoundException e){
+
+         e.printStackTrace();
+         
+      }
+      
+   }
+   
+}
+
+
+##### The advantage of using try with resources is that whenever the try block is completed, then the resource is automatically released.
