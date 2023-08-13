@@ -125,39 +125,59 @@ Description: ► Lets say we have try, catch and finally block. But in those 3 b
 
 #### example 2:
 
-import java.io.*;
-
 class Test{
-
-   void stuDetails() throws FileNotFoundException{
-
-      FileInputStream fis = new FileInputStream("abc.txt");
-      
-   }
-
-   void hod() throws FileNotFoundException{
-
-      stuDetails();
-      
-   }
-   
-    void principal() throws FileNotFoundException{
-
-      hod();
-      
-   }
-   
-   void officeBoy() throws FileNotFoundException{
-
-      principal();
-   }
 
    public static void main(String[] args){
 
-      Test t = new Test();
+      try{
 
-      t.officeBoy();
+         System.out.println("conection open");
+         System.out.println(10/0);
+         
+      }
+      catch(Exception e){
+
+         System.out.println("exception handling");
+      }
+
+      finally{
+
+         System.out.println("connection closing");
+         
+      }
+      
    }
+   
 }
 
-Description: ► If the methods dont handle the exception, JVM will handle the exception because JVM is calling the main method.
+Description: ► The code above the exception will be executed(line 134), and the code below the exception(line 135) will not be executed. So, "connection open" will be executed, since it is above the exception code. The finally block will also be executed because the application is normal. The catch block will also be executed since an exception was raised in the try block.
+
+#### example 3:
+
+
+class Test{
+
+   public static void main(String[] args){
+
+      try{
+
+         System.out.println("conection open");
+         System.out.println(10/0);
+         
+      }
+      catch(NullPointerException e){
+
+         System.out.println("exception handling");
+      }
+
+      finally{
+
+         System.out.println("connection closing");
+         
+      }
+      
+   }
+   
+}
+
+Description: ► Again we have tr, catch and finally  block. In the try block, 'ArithmeticException' was raised(line 165) but in the catch block(line 168), we wrote 'NullPointerException'. Those 2 exceptions dont match and because they dont match the catch block will not get executed. This is an abnoral case, where try block and finally block only will get executed.
