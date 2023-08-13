@@ -181,3 +181,6 @@ class Test{
 }
 
 Description: ► Again we have tr, catch and finally  block. In the try block, 'ArithmeticException' was raised(line 165) but in the catch block(line 168), we wrote 'NullPointerException'. Those 2 exceptions dont match and because they dont match the catch block will not get executed. This is an abnoral case, where try block and finally block only will get executed.
+
+
+#### example 4:
