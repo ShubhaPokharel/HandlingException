@@ -411,4 +411,32 @@ class Test{
 }
 
 
+The example above isnt correct.  We are not calling the close() method, but it is internally callig close() method. The close method can cause IOException. IOException is checked exception, so we need to handle it.
+
+
+import java.io.*;
+
+class Test{
+
+   public static void main(String[] args){
+
+      try(FileInputStream fis = new FileInputStream("abc.txt") ){
+
+         System.out.println("enter a number");
+         
+      }
+
+      catch(IOException e){
+
+         e.printStackTrace();
+         
+      }
+      
+   }
+   
+}
+
 ##### The advantage of using try with resources is that whenever the try block is completed, then the resource is automatically released.
+
+____________
+
