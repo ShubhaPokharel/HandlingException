@@ -80,9 +80,9 @@ There are 5 keyword in exception handling:
 4. throws
 5. throw
   
-##### Note: We have already talked about try, catch and throws keyword. Let’s talk about the finally keyword.
+###### Note: We have already talked about try, catch and throws keyword. Let’s talk about the finally keyword.
 
-#About 'finally' keyword:
+### About 'finally' keyword:
 There are 3 cases in try and catch block:
 1. The first case is that the connection opens in the try block. The transaction is successful. Then, the application gets terminated normally and the connection closes.
    
@@ -93,7 +93,7 @@ There are 3 cases in try and catch block:
 
 To overcome the 3rd case we can use the 'finally' block. The finally block will get executed in both normal and abnormal cases. To release the resources(scanner, file and connection) we can use the 'finally' keyword. 
 
-##### example 1:
+#### example 1:
 
 class Test{
 
@@ -122,7 +122,7 @@ class Test{
 
 Description: ► Lets say we have try, catch and finally block. But in those 3 blocks we are just printing out words. The catch block will not get executed because there is no exception in the try block. The try block and finally block will get executed.
 
-##### example 2:
+#### example 2:
 
 import java.io.*;
 
