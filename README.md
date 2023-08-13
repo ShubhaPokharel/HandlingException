@@ -266,3 +266,102 @@ Description: ►
 - 'System.exit(0)' will sht JVM down.
  
 When JVM is shut down, finally block will not be executed. But, if 'System.exit(0)' is below exception code, finally block be be executed.
+
+# Try and catch possobilities 
+
+1. try{
+
+   }
+
+   catch(){
+
+   }
+
+
+2. try{
+  
+   }
+
+   catch(){
+
+   }
+
+   statements
+
+   try{
+  
+   }
+
+   catch(){
+
+   }
+
+3.  try{
+  
+   }
+
+   catch(){
+
+   }
+
+   catch(){
+
+   }
+
+
+4. try{
+
+      try{
+
+      }
+
+      catch(){
+
+      }
+   
+   }
+
+   catch(){
+
+   }
+
+5. try{
+
+   }
+
+   catch(){
+
+         try{
+
+         }
+
+         catch(){
+
+         }
+   
+   }
+
+6. try{
+
+      try{
+
+      }
+
+      catch(){
+
+      }
+   
+   }
+
+   catch(){
+
+         try{
+
+         }
+
+         catch(){
+
+         }
+   
+   }
+   
