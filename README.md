@@ -239,4 +239,30 @@ class Test{
 Description: ► This time all 3 exceptions has raised. ArithmeticException(line 218) was raised in the try block. StringIndexOutOfBoundsException(line 223) was raised in the catch block. ArrayIndexOutOfBoundsException(line 230) was raised in the finally block. JVM will raise only one exception and that exception is the exception in the finally block. 
 
 
+#### example 5: 
 
+class Test{
+
+   public static void main(String[] args){
+
+      try{
+
+         System.out.println("try");
+
+         System.out.println("block");
+
+         System.exit(0);  // JVM shutdown
+      }
+
+      finally{
+
+          System.out.println("finally");
+      }
+   }
+}
+
+Description: ► 
+
+- 'System.exit(0)' will sht JVM down.
+ 
+When JVM is shut down, finally block will not be executed. But, if 'System.exit(0)' is below exception code, finally block be be executed.
