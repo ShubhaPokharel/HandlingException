@@ -82,6 +82,7 @@ There are 5 keyword in exception handling:
   
 ###### Note: We have already talked about try, catch and throws keyword. Let’s talk about the finally keyword.
 
+
 ### About 'finally' keyword:
 There are 3 cases in try and catch block:
 1. The first case is that the connection opens in the try block. The transaction is successful. Then, the application gets terminated normally and the connection closes.
