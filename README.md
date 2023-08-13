@@ -93,7 +93,7 @@ There are 3 cases in try and catch block:
 
 To overcome the 3rd case we can use the 'finally' block. The finally block will get executed in both normal and abnormal cases. To release the resources(scanner, file and connection) we can use the 'finally' keyword. 
 
-For example:
+example 1:
 
 class Test{
 
@@ -120,4 +120,43 @@ class Test{
 }
 
 
-Description: Lets say we have try, catch and finally block. But in those 3 blocks we are just printing out words. The catch block will not get executed because there is no exception in the try block. The try block and finally block will get executed.
+Description: ► Lets say we have try, catch and finally block. But in those 3 blocks we are just printing out words. The catch block will not get executed because there is no exception in the try block. The try block and finally block will get executed.
+
+example 2:
+
+import java.io.*;
+
+class Test{
+
+   void stuDetails() throws FileNotFoundException{
+
+      FileInputStream fis = new FileInputStream("abc.txt");
+      
+   }
+
+   void hod() throws FileNotFoundException{
+
+      stuDetails();
+      
+   }
+   
+    void principal() throws FileNotFoundException{
+
+      hod();
+      
+   }
+   
+   void officeBoy() throws FileNotFoundException{
+
+      principal();
+   }
+
+   public static void main(String[] args){
+
+      Test t = new Test();
+
+      t.officeBoy();
+   }
+}
+
+Description: ► If the methods dont handle the exception, JVM will handle the exception because JVM is calling the main method.
