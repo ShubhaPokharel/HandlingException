@@ -184,3 +184,25 @@ Description: ► Again we have tr, catch and finally  block. In the try block, '
 
 
 #### example 4:
+
+class Test{
+
+   public static void main(String[] args){
+
+      try{
+
+         System.out.println("connection open");
+         
+      }
+
+      finally{
+
+         System.out.println("connection close");
+      }
+      
+   }
+   
+}
+
+Description: ►  Try and finally block is also valid. We can use try and catch block but we can also use try and finally block.
+
