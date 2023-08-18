@@ -589,23 +589,25 @@ class Test{
 
 - the super keyword will give child information to the parent class
 
+# Tree Structure
 
-
-Throwable - 
+### Throwable - 
 
          EXCEPTION
-         
+
+         ▾
              - RuntimeException
-               
-                            - ArithmeticException
+
+                         
+                           ↳ - ArithmeticException
                             
-                            - NullPointerException
+                           ↳ - NullPointerException
 
-                            - NumberFormatException
+                           ↳ - NumberFormatException
 
-                            - IllegalArgumentException
+                           ↳ - IllegalArgumentException
 
-                            - ArrayIndexOutOfBoundsException
+                           ↳ - ArrayIndexOutOfBoundsException
                             
                             
                - SQLException
@@ -616,24 +618,24 @@ Throwable -
                
                - IOException
                
-                           - FileNotFoundException
+                          ↳ - FileNotFoundException
                            
-                           - InterruptedException
+                          ↳ - InterruptedException
 
-                            - EOFException
+                          ↳ - EOFException
         
                
 
-
+          ▾
          
              - ERROR
         
-                 - OutOfMemoryError
+                ↳ - OutOfMemoryError
                  
-                 - AWTError
+                ↳ - AWTError
                  
-                 - LinkageError
+                ↳ - LinkageError
                  
-                 - VirtualMachineError
+                ↳ - VirtualMachineError
 
 
