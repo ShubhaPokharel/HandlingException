@@ -438,5 +438,51 @@ class Test{
 
 ##### The advantage of using try with resources is that whenever the try block is completed, then the resource is automatically released.
 
+
+# Throw keyword
+
+- We use the 'throw' keyword to throw the exception.
+
+  Example:
+
+  throw new ArithmeticException("your not eligable");
+
+The 'ArithmeticException' has its own message, but we are printing our own message.
+
+Example:
+
+import java.util.*;
+
+class Test{
+
+   static void validate(int age){
+
+      if(age > 18){
+
+         System.out.println("eligable for voting");
+      }
+
+      else{
+
+         throw new ArithmeticException("your not eligable");
+      }
+   }
+
+   public static void main(String[] args){
+
+      Scanner s = new Scanner(System.in);
+
+      System.out.println("please enter your age");
+
+      int age = s.nextInt();
+
+      Test.validate(age);
+      
+   }
+   
+}
+
+
+
 ____________
 
