@@ -590,3 +590,50 @@ class Test{
 - the super keyword will give child information to the parent class
 
 
+
+Throwable - 
+
+         EXCEPTION
+         
+             - RuntimeException
+               
+                            - ArithmeticException
+                            
+                            - NullPointerException
+
+                            - NumberFormatException
+
+                            - IllegalArgumentException
+
+                            - ArrayIndexOutOfBoundsException
+                            
+                            
+               - SQLException
+               
+               - AWTException
+               
+               - ServletException
+               
+               - IOException
+               
+                           - FileNotFoundException
+                           
+                           - InterruptedException
+
+                            - EOFException
+        
+               
+
+
+         
+             - ERROR
+        
+                 - OutOfMemoryError
+                 
+                 - AWTError
+                 
+                 - LinkageError
+                 
+                 - VirtualMachineError
+
+
