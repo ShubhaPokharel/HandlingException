@@ -585,3 +585,8 @@ class Test{
    }
    
 }
+
+
+- the super keyword will give child information to the parent class
+
+
