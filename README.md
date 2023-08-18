@@ -514,3 +514,74 @@ ____________
 
    Example: class Test extends Exception{}
 
+
+
+- The 'throw' keyword throws the userdefined and predefined exception. It is not recommanded to throw the predefined exception because it has fixed values.
+
+
+## Printing the exception with or with out message
+
+The default constructor prints exception without the description.
+
+class Test extends RuntimeException{
+
+   // default constructor
+}
+
+The params constructor prints the exception with description.
+
+class Test extends RuntimeException{
+
+   Test(String msg){
+
+      super(msg);    // calling the parent constructor
+      
+   }
+   
+}
+
+Example - 
+
+import java.util.*;
+
+// step 1: create the exception
+
+class InvalidAgeException extends RuntimeException{
+
+   InvalidAgeException(String msg){
+
+      super(msg);
+   }
+}
+
+// step 2: throw the exception
+
+class Test{
+
+   static void validate(int age){
+
+      if(age > 18){
+
+         System.out.println("eligable for voting");
+      }
+
+      else{
+
+         throw new InvalidAgeException("your not eligable");
+      }
+      
+   }
+
+   public static void main(String[] args){
+
+      Scanner s = new SCanner(System.in);
+
+      System.out.println("enter your age");
+
+      int age = s.nextInt();
+
+      Test.validate(age);
+      
+   }
+   
+}
