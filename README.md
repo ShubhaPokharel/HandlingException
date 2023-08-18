@@ -684,8 +684,138 @@ class Child extends Parent{
 
 }
 
-__
+____________
 
 If the parent class throws the FileNotFoundException, then the child class can throw the FileNotFoundException. The child class does not have to throw the FileNotFoundException.
 
 The parent class can throw the Parent class(Exception) and the child class can throw the child class(FileNotFoundException).
+
+Example:
+
+import java.io.*;
+
+class Test{
+
+   void eat() throws Exception{
+
+      //samosa chat
+      
+   }
+   
+}
+
+class Child extends Test{
+
+   void eat() throws FileNotFoundException{
+
+      //momos and pani puri
+      
+   }
+   
+}
+
+However the parent class cant throw the child class(FileNotFoundException) and the child class cant throw the parent class(Exception).
+
+Example:
+
+import java.io.*;
+
+class Test{
+
+   void eat() throws FileNotFoundException{
+
+      //samosa chat
+      
+   }
+   
+}
+
+class Child extends Test{
+
+   void eat() throws Exception{
+
+      //momos and pani puri
+      
+   }
+   
+}
+
+- The example above is wrong.
+
+  # NullPointerException
+
+  - Null means nothing!
+ 
+Example:
+
+class Test{
+
+   public static void main(String[] args){
+
+      String name = null;
+  
+      System.out.println(name.length());
+  
+  
+    }
+  
+}
+
+In the above example, we are trying to find the length of "name" but the name contains "null". Null means nothing, so we are going to get NullPointerException.
+
+
+## Method arguments
+
+We can pass the exceptions in the method parameters.
+
+Example:
+
+class Test{
+
+   static void info(ArtithmeticException e){
+   
+
+      System.out.println("Arithmetic");
+      
+   }
+
+   public static void main(String[] args){
+
+      Test.info(new ArithmeticException("/ by zero"));
+      
+   }
+   
+}
+
+The example above can only take the ArithmeticException, but if we want to take all exceptions we can use the root class.
+
+class Test{
+
+   static void info1(ArtithmeticException e){
+   
+
+      System.out.println("Arithmetic");
+      
+   }
+
+   static void info2(Exception e){
+   
+
+      System.out.println(e.getMessage());
+      
+   }
+
+   public static void main(String[] args){
+
+      Test.info1(new ArithmeticException("/ by zero"));
+
+      Test.info2(new NullPointerException("null"));
+      
+      
+   }
+   
+}
+
+Now we can execute different exceptions!
+
+
