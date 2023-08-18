@@ -639,3 +639,15 @@ class Test{
                 ↳ - VirtualMachineError
 
 
+
+_____
+
+☆ In the tree structure, RuntimeException and its child classes & errors and its child clases are unchecked exceptions. The remaining are checked exceptions.
+
+☆ The root class of exception handling is Throwable class.
+
+☆ Exception and error classes are the child of Throwable.
+
+☆ Throwable is the parent, exception and erorrs are the child and the rest are the grandchildren.
+
+
