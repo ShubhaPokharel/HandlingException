@@ -651,3 +651,41 @@ _____
 ☆ Throwable is the parent, exception and erorrs are the child and the rest are the grandchildren.
 
 
+
+## Method overriding
+
+► Method overriding is rewriting the parents method implementation in the child class according to the child classes requirement
+
+Case 1-
+
+- If the overridden method does not throw any exception, then the overriding method should not throw any exception. If the overriding method throws any exception, we will get an error.
+
+ example:
+
+class Parent{
+
+   void eat(){
+
+       // samosa chat    
+       
+       //overridden method
+       
+   }
+ 
+}
+
+class Child extends Parent{
+
+   void eat() throws FileNotFoundException{
+
+      // momos and pani puri
+      
+   }
+
+}
+
+__
+
+If the parent class throws the FileNotFoundException, then the child class can throw the FileNotFoundException. The child class does not have to throw the FileNotFoundException.
+
+The parent class can throw the Parent class(Exception) and the child class can throw the child class(FileNotFoundException).
