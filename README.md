@@ -482,7 +482,35 @@ class Test{
    
 }
 
+###### We need to create the exceptions and then throw the exception.
+
+It is not good to give our own messaged. But the throw keyword can be useful for user defined exceptions.
+
 
 
 ____________
+
+## There are 2 types of exceptions
+
+1. user defined exceptions
+
+ - exceptions given from us
+   
+2. pre defined exceptions
+
+ - exceptions from java
+
+## There are 2 types of user defined exceptions
+
+1. user defined un-checked exceptions
+
+    If our normal java class becomes un checked exception class, we should extend "RuntimeException", so we can make it an unchecked exception.
+
+   Example: class Test extends RuntimeException{}
+
+2. user defined checked exceptions
+
+    If our normal java class becomes checked exception class, we should extend "Exception", so we can make it an checked exception.
+
+   Example: class Test extends Exception{}
 
